@@ -169,6 +169,14 @@ p { margin: 0; max-width: 38rem; }
 .sec { padding-block: var(--sec-pad); }
 .sec--alt { background: var(--paper-2); }
 .sec-head { display: grid; gap: 18px; margin-bottom: 40px; }
+.sec-split { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); align-items: center; margin-bottom: 40px; }
+.sec-split .sec-head { margin-bottom: 0; }
+@media (min-width: 960px) { .sec-split { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: 48px; } }
+.sec-media { margin: 0; display: grid; gap: 10px; min-width: 0; }
+.sec-media img { display: block; width: 100%; height: auto; object-fit: cover; border-radius: var(--r-lg); border: 1px solid var(--line); background: var(--paper-2); }
+.sec-media figcaption { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+.band .sec-media img { border-color: var(--dark-line); background: var(--dark-2); }
+.band .sec-media figcaption { color: var(--on-dark-mut); }
 
 /* Card grids */
 .grid3 { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
@@ -335,11 +343,17 @@ p { margin: 0; max-width: 38rem; }
 
   <section class="sec">
     <div class="wrap">
-      <header class="sec-head">
-        <div class="eyebrow-wrap"><span class="eyebrow-line"></span><span class="eyebrow">At the wall</span></div>
-        <h2 class="h-2">What you could do back there</h2>
-        <p class="lead">The original stays behind its barrier. Everything you explore is projected on the wall beside it.</p>
-      </header>
+      <div class="sec-split">
+        <header class="sec-head">
+          <div class="eyebrow-wrap"><span class="eyebrow-line"></span><span class="eyebrow">At the wall</span></div>
+          <h2 class="h-2">What you could do back there</h2>
+          <p class="lead">The original stays behind its barrier. Everything you explore is projected on the wall beside it.</p>
+        </header>
+        <figure class="sec-media">
+          <img src="assets/gallery-engage-pedestal.jpg" alt="Gallery visitors pointing in mid-air above a pedestal with options for Artist Bio, Other Works, and Historical Information beside a projected painting" width="1024" height="682" loading="lazy" decoding="async">
+          <figcaption>Touchless exhibit exploration</figcaption>
+        </figure>
+      </div>
       <div class="grid3">
         <article class="card">
           <span class="kicker">Zoom</span>
@@ -369,10 +383,16 @@ p { margin: 0; max-width: 38rem; }
   <section class="sec band">
     <img class="watermark" src="assets/HV_Glyph_Light.svg" alt="" width="128" height="112" aria-hidden="true" loading="lazy" decoding="async">
     <div class="wrap">
-      <header class="sec-head">
-        <div class="eyebrow-wrap"><span class="eyebrow-line"></span><span class="eyebrow">How it works</span></div>
-        <h2 class="h-2">Sensors, software and light, all kept away from the art.</h2>
-      </header>
+      <div class="sec-split">
+        <header class="sec-head">
+          <div class="eyebrow-wrap"><span class="eyebrow-line"></span><span class="eyebrow">How it works</span></div>
+          <h2 class="h-2">Sensors, software and light, all kept away from the art.</h2>
+        </header>
+        <figure class="sec-media">
+          <img src="assets/gesture-interaction-dark.jpg" alt="Close-up of a person's hand hovering in front of a projected dark interface, selecting an interactive control without touching the wall" width="827" height="516" loading="lazy" decoding="async">
+          <figcaption>Mid-air gesture recognition</figcaption>
+        </figure>
+      </div>
       <div class="grid3">
         <article class="card">
           <span class="kicker">01 · Sense</span>
@@ -401,11 +421,17 @@ p { margin: 0; max-width: 38rem; }
 
   <section class="sec sec--alt">
     <div class="wrap">
-      <header class="sec-head">
-        <div class="eyebrow-wrap"><span class="eyebrow-line"></span><span class="eyebrow">Living Heritage Solutions</span></div>
-        <h2 class="h-2">One program, from the gallery to your home</h2>
-        <p class="lead">Living Heritage is HoverVerse's program for museums and cultural institutions. It works in three parts, each one touchless and screenless.</p>
-      </header>
+      <div class="sec-split">
+        <header class="sec-head">
+          <div class="eyebrow-wrap"><span class="eyebrow-line"></span><span class="eyebrow">Living Heritage Solutions</span></div>
+          <h2 class="h-2">One program, from the gallery to your home</h2>
+          <p class="lead">Living Heritage is HoverVerse's program for museums and cultural institutions. It works in three parts, each one touchless and screenless.</p>
+        </header>
+        <figure class="sec-media">
+          <img src="assets/gallery-guide-wall.jpg" alt="Museum visitors pointing at a projected gallery wall showing artwork thumbnails and a Scan to Navigate floorplan map" width="1024" height="682" loading="lazy" decoding="async">
+          <figcaption>Engage, Guide &amp; Extend in action</figcaption>
+        </figure>
+      </div>
       <div class="grid3">
         <article class="card">
           <span class="kicker">Module</span>
